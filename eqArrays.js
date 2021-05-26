@@ -1,24 +1,27 @@
 "use strict";
 
-const eqArrays = function (values1, values2) {
-  for (let i = 0; i < values1.length; i++)
-    for (let j = 0; j < values2.length; j++) {
-      if (values1[i] === values2[j]) {
-        return true;
-      } else {
-        return false;
-      }
-    }
-};
-
 const assertEqual = function (actual, expected) {
   if (actual === expected)
     console.log(`✅✅✅ Assertion Passed: ${actual} === ${expected}`);
   else console.log(`🔴🔴🔴 Assertion Failed: ${actual} !== ${expected}`);
 };
 
-// eqArrays([1, 2, 3], [1, 2, 3]) // => true
-// eqArrays([1, 2, 3], [3, 2, 1]) // => false
+const eqArrays = function (values1, values2) {
+  if (values1.length !== values2.length) {
+    return false;
+  }
 
-// eqArrays(["1", "2", "3"], ["1", "2", "3"]) // => true
-// eqArrays(["1", "2", "3"], ["1", "2", 3]) // => false
+  for (let i = 0; i < values1.length; i++) {
+    if (values1[i] !== values2[i]) {
+      return false;
+    }
+  }
+  return true;
+};
+
+console.log(eqArrays([1, 2, 3], [1, 2, 3]));
+
+assertEqual(eqArrays([1, 2, 3], [1, 2, 3]), true);
+assertEqual(eqArrays([1, 2, 3], [3, 2, 1]), false);
+assertEqual(eqArrays(["1", "2", "3"], ["1", "2", "3"]), true);
+assertEqual(eqArrays(["1", "2", "3"], ["1", "2", 3]), false);
