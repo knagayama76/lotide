@@ -17,12 +17,6 @@ const assertEqual = function (actual, expected) {
   else console.log(`🔴🔴🔴 Assertion Failed: ${actual} !== ${expected}`);
 };
 
-assertEqual(eqArrays([1, 2, 3], [1, 2, 3]), true);
-
-// loop value
-// compare 2 values and see if 2 values are exactly the same
-// return result -> true or false
-
 // eqArrays([1, 2, 3], [1, 2, 3]) // => true
 // eqArrays([1, 2, 3], [3, 2, 1]) // => false
 
