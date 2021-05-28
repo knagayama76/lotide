@@ -1,10 +1,10 @@
 "use strict";
 
-const assertEqual = function (actual, expected) {
-  if (actual === expected)
-    console.log(`✅✅✅ Assertion Passed: ${actual} === ${expected}`);
-  else console.log(`🔴🔴🔴 Assertion Failed: ${actual} !== ${expected}`);
-};
+// const assertEqual = function (actual, expected) {
+//   if (actual === expected)
+//     console.log(`✅✅✅ Assertion Passed: ${actual} === ${expected}`);
+//   else console.log(`🔴🔴🔴 Assertion Failed: ${actual} !== ${expected}`);
+// };
 
 const eqArrays = function (values1, values2) {
   if (values1.length !== values2.length) {
@@ -19,8 +19,14 @@ const eqArrays = function (values1, values2) {
   return true;
 };
 
-const assertArraysEqual = function (arr1, arr2) {
-  console.log(eqArrays(arr1, arr2));
+// const assertArraysEqual = function (arr1, arr2) {
+//   console.log(assertEqual(eqArrays(arr1, arr2)));
+// };
+
+const assertArraysEqual = function (actual, expected) {
+  if (eqArrays)
+    console.log(`✅✅✅ Assertion Passed: ${actual} === ${expected}`);
+  else console.log(`🔴🔴🔴 Assertion Failed: ${actual} !== ${expected}`);
 };
 
 assertArraysEqual([1, 2, 3], [1, 2, 3]);
