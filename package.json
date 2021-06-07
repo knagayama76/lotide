@@ -1,5 +1,5 @@
 {
-  "name": "lotide",
+  "name": "@knagayama76/lotide",
   "version": "1.0.0",
   "main": "assertArraysEqual.js",
   "directories": {
@@ -12,13 +12,13 @@
     "type": "git",
     "url": "git+https://github.com/knagayama76/lotide.git"
   },
-  "author": "",
+  "author": "Kaoru Nagayama",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/knagayama76/lotide/issues"
   },
   "homepage": "https://github.com/knagayama76/lotide#readme",
-  "description": "",
+  "description": "a function library created for learning purpose",
   "devDependencies": {
     "chai": "^4.3.4",
     "mocha": "^8.4.0"
