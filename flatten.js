@@ -2,8 +2,9 @@
 
 const eqArrays = function (arr1, arr2) {
   for (let i = 0; i < arr1.length; i++) {
-    if (arr1[i] === arr2[i]) return true;
+    if (arr1[i] !== arr2[i]) return false;
   }
+  return true;
 };
 
 // Imprelent assertArraysEqual which will take two arrays
@@ -25,7 +26,7 @@ const flatten = function (arr) {
       for (const num of el) output.push(num);
     }
   }
-  console.log(output);
+  return output;
 };
 
 flatten([1, 2, [3, 4], 5, [6]]);
