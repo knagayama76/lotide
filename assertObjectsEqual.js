@@ -1,11 +1,4 @@
 "use strict";
-
-const assertEqual = function (actual, expected) {
-  if (actual === expected)
-    console.log(`✅✅✅ Assertion Passed: ${actual} === ${expected}`);
-  else console.log(`🔴🔴🔴 Assertion Failed: ${actual} !== ${expected}`);
-};
-
 const eqArrays = function (arr1, arr2) {
   if (arr1.length !== arr2.length) return false;
 
@@ -33,16 +26,31 @@ const eqObjects = function (object1, object2) {
   return true;
 };
 
+// FUNCTION IMPLEMENTATION
+const assertObjectsEqual = function (actual, expected) {
+  const inspect = require("util").inspect;
+  if (eqObjects(actual, expected)) {
+    console.log(
+      `✅✅✅ Assertion Passed: ${inspect(actual)} === ${inspect(expected)}`
+    );
+  } else {
+    console.log(
+      `🔴🔴🔴 Assertion Failed: ${inspect(actual)} !== ${inspect(expected)}`
+    );
+  }
+  // console.log(`Example label: ${inspect(actual)}`);
+};
+
 const ab = { a: "1", b: "2" };
 const ba = { b: "2", a: "1" };
-assertEqual(eqObjects(ab, ba), true);
+assertObjectsEqual(ab, ba);
 
 const abc = { a: "1", b: "2", c: "3" };
-assertEqual(eqObjects(ab, abc), false);
+assertObjectsEqual(ab, abc);
 
 const cd = { c: "1", d: ["2", 3] };
 const dc = { d: ["2", 3], c: "1" };
-assertEqual(eqObjects(cd, dc), true);
+assertObjectsEqual(cd, dc);
 
 const cd2 = { c: "1", d: ["2", 3, 4] };
-assertEqual(eqObjects(cd, cd2), false);
+assertObjectsEqual(cd, cd2);
