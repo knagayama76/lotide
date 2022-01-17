@@ -1,7 +1,7 @@
 {
-  "name": "lotide",
+  "name": "@knagayama76/lotide",
   "version": "1.0.0",
-  "description": "",
+  "description": "a mini clone of the lodash library",
   "main": "assertArraysEqual.js",
   "directories": {
     "test": "test"
@@ -13,7 +13,7 @@
     "type": "git",
     "url": "git+https://github.com/knagayama76/lotide.git"
   },
-  "author": "",
+  "author": "Kaoru Nagayama",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/knagayama76/lotide/issues"
