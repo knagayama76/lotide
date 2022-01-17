@@ -1,7 +1,6 @@
 "use strict";
 
 const eqArrays = require("./eqArrays");
-console.log(eqArrays);
 
 // Imprelent assertArraysEqual which will take two arrays
 const assertArraysEqual = function (actual, expected) {
